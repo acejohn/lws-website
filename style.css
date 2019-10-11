@@ -106,7 +106,7 @@ h4.et_pb_module_header a {
     font-family: 'Roboto Condensed', sans-serif !important;
 }
 .et_pb_section.et_pb_section_0.et_pb_with_background.et_section_regular p {
-    line-height: 1em;
+    line-height: 1.2em;
 }
 .et_pb_section {
     padding: 0;
@@ -183,10 +183,10 @@ body.home .breadcrumbs {
     font-size: 1.1em;
     width: 81%;
     margin: auto;
-    padding-top: 7px;
+    padding-top: 12px;
 	color:#fff;
 	border-top: 1px solid #4853c4;
-	height: 36px;
+	height: 40px;
 }
 .breadcrumbs a {
     color: #fff;
@@ -199,12 +199,17 @@ span.breadcrumb_last {
 
 div#et-boc {
     background: #273088;
-    margin-top: 65px;
+    margin-top: 55px;
+}
+@media only screen and (max-width: 980px){
+	div#et-boc {
+		margin-top: 45px;
+	}
 }
 @media only screen and (min-width: 1024px){
 .et_builder_inner_content.et_pb_gutters3 {
        background: #273088;
-	   margin-top: 65px
+	   margin-top: 55px
 }
 	#mega-menu-wrap-primary-menu .mega-menu-toggle .mega-toggle-blocks-right .mega-toggle-block {
     margin-top: -14px;
@@ -386,7 +391,9 @@ header#main-header {
     padding: 9px !important;
     text-align: center;
 }
-
+.container.clearfix.et_menu_container {
+    width: 90% !important;
+}
 @media only screen and (max-width:981px){
 	.menu-cta { 
     height: 46px;
@@ -571,7 +578,7 @@ padding-top: 38px;
 padding-top: 15px;
 }
 	.et_pb_section.et_pb_section_0.et_pb_with_background.et_section_regular p {
-    line-height: 1em;
+    line-height: 1.2em;
 }
 .et_pb_section {
     padding: 0;
