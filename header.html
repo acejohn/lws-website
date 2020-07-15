@@ -1,0 +1,107 @@
+<meta name="google-site-verification" content="dgIF6fUWa0F-VYfGGzgJCqr8IICyZg8HD8GMtkEfUy8" />
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto+Condensed" rel="stylesheet">
+
+<script type="text/javascript">
+ 	// makes sure the whole site is loaded
+    jQuery(window).load(function () {
+        "use strict";
+     // will first fade out the loading animation
+	 if(  jQuery( '.et-bfb' ).length <= 0 && jQuery( '.et-fb' ).length <= 0  ){ 
+	 jQuery(".status").fadeOut();
+	 // will fade out the whole DIV that covers the website.
+	 jQuery(".preloader").delay(1500).fadeOut("slow");
+	jQuery("#page-container").css('display','block'); //disable the display none on page-container when preview mode
+	 }else{
+	 jQuery(".preloader").css('display','none');
+	 jQuery("#page-container").css('display','block'); //disable the display none on page-container when in edit mode
+	 }
+    }); 
+</script> 
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0"></script>
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-139864840-1', 'auto');
+	  ga('send', 'pageview');
+
+</script>
+
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/5c87475d101df77a8be21965/default';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+</script>
+<!--End of Tawk.to Script-->
+
+<script>
+	
+	jQuery(document).ready(function($){
+		// standard on load code goes here with $ prefix
+		// note: the $ is setup inside the anonymous function of the ready comma
+		var thing = $('.breadcrumbs');
+		thing.insertAfter('div.et_pb_section.et_pb_section_0');
+		thing.insertBefore('.page-header');
+
+		/*Social media icon visible only on pages - footer*/
+		if ($(".home").length > 0)
+		{
+			$("#social-media").hide();
+			$("#social-media-div").hide();
+			$(".footer-container").css('min-height','310px');
+			$(".footer-content").css('margin-left','17%');
+		}
+		
+		/*Temporary hide the Live Demo tab on Specification table*/
+		if ($(".et_pb_tabs_controls a:contains(Live Demo)").length > 0)
+		{
+			$(".et_pb_tabs_controls a:contains(Live Demo)").hide();	
+		}
+
+		/*Live Demo page - Form create two columns*/
+		var first = $('<div/>').addClass('wpbc_structure_form-L').addClass('first');
+		var mid = $('<div/>').addClass('wpbc_structure_form-L').addClass('mid');
+
+		var fElems = $('.wpbc_structure_form div.form-group:nth-child(2n+1)');
+		var mElems = $('.wpbc_structure_form div.form-group:nth-child(2n+2)');
+
+		fElems.appendTo(first);
+		mElems.appendTo(mid);
+
+		$('.wpbc_structure_form').append(first,mid);
+	
+	});
+	
+	/*FAQ accordion on sidebar*/
+	document.getElementById("defaultOpen1").click();
+	
+	function openCity(evt, cityName)
+	{
+	  var i, tabcontent, tablinks;
+	  tabcontent = document.getElementsByClassName("tabcontent");
+	  for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	  }
+	  tablinks = document.getElementsByClassName("tablinks");
+	  for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	  }
+	  document.getElementById(cityName).style.display = "block";
+	  evt.currentTarget.className += " active";
+	}
+</script>
+
